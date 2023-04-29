@@ -11,6 +11,7 @@ def handler(event, context):
     user.setEmail(event.get("email"))
     user.setGender(event.get("gender"))
     user.setPassword(event.get("pass"))
+    print(event.get("pass"))
     response = "Something went wrong!!!"
     try:
         signedup = UserBO(user).signUp()

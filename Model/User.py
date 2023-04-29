@@ -38,7 +38,7 @@ class User:
         self.__gender = gender
 
     def getPassword(self):
-        self.__password
+        return self.__password
 
     def setPassword(self, password):
         self.__password = password
