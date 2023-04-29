@@ -5,5 +5,5 @@ import logging
 def handler(event, context):
     print("event: " + str(event))
     print("context: " + str(context))
-    return json.dumps(event)
+    return event.get("resource",{"value":"Not Available"})
     
