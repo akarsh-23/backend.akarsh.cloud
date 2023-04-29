@@ -1,5 +1,7 @@
 from Model import User 
+from boto3.dynamodb.conditions import Attr
 import boto3
+
 
 class UserDAO:
     global dynamodb, table
@@ -19,7 +21,8 @@ class UserDAO:
                     "email":self.__user.getEmail(),
                     "gender":self.__user.getGender(),
                     "password":self.__user.getPassword()
-                }
+                },
+                ConditionExpression=Attr("email").not_exists()
             )
             return True;
         except Exception as e:
