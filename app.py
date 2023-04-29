@@ -1,13 +1,11 @@
+from BusinessLogicLayer.UserBO import UserBO
 from Model.User import User
-import boto3
-import json
-import logging
 import uuid
 
 
 def handler(event, context):
     user = User()
-    user.setId(uuid.uuid1())
+    user.setId(str(uuid.uuid1()))
     user.setFirstname(event.get("firstname"))
     user.setLastname(event.get("lastname"))
     user.setEmail(event.get("email"))

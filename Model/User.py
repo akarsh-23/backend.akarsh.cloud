@@ -7,38 +7,38 @@ class User:
         self.__gender = str()
         self.__password = str()
 
-    def getId():
+    def getId(self):
         return self.__id
 
-    def setId(id):
+    def setId(self, id):
         self.__id = id
 
-    def getFirstname():
+    def getFirstname(self):
         return self.__firstname
 
-    def setFirstname(firstname):
+    def setFirstname(self, firstname):
         self.__firstname = firstname
 
-    def getLastname():
+    def getLastname(self):
         return self.__lastname
 
-    def setLastname(lastname):
+    def setLastname(self, lastname):
         self.__lastname = lastname
 
-    def getEmail():
+    def getEmail(self):
         return self.__email
 
-    def setEmail(email):
+    def setEmail(self, email):
         self.__email = email
 
-    def getGender():
+    def getGender(self):
         return self.__gender
 
-    def setGender(gender):
+    def setGender(self, gender):
         self.__gender = gender
 
-    def getPassword():
+    def getPassword(self):
         self.__password
 
-    def setPassword(password):
+    def setPassword(self, password):
         self.__password = password

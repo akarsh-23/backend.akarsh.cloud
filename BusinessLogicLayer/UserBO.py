@@ -1,4 +1,5 @@
 from DataAccessLayer.UserDAO import UserDAO
+from Model.User import User
 
 class UserBO:
     def __init__(self, user:User):
@@ -8,6 +9,6 @@ class UserBO:
         try:
             created = self.userdao.CreateUser()
             if created:
-                return true
+                return True
         except Exception as e:
             raise e

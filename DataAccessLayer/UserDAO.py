@@ -1,9 +1,8 @@
 from Model import User 
 import boto3
-import botocore
 
 class UserDAO:
-    
+    global dynamodb, table
     dynamodb = boto3.resource('dynamodb')
     table = dynamodb.Table('users.akarsh.cloud')
     
@@ -22,6 +21,6 @@ class UserDAO:
                     "password":self.__user.getPassword()
                 }
             )
-            return true;
+            return True;
         except Exception as e:
             raise e
